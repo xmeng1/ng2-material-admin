@@ -1,16 +1,52 @@
-<h1>
-  {{title}}
-</h1>
-<md-card>
-  <md-input-container>
-    <input mdInput placeholder="Favorite food" value="Sushi">
-  </md-input-container>
-</md-card>
-<div class="deep-purple-amber">
+<div [ngClass]="selectedThemeClass">
+  <h1>
+    {{title}}
+  </h1>
+  <md-card>
+    <md-select
+      placeholder="Select the theme"
+      name="themeList"
+      (change)="onThemeChange()"
+      [(ngModel)]="selectedThemeClass">
+      <md-option *ngFor="let theme of themes" [value]="theme.value">
+        {{theme.viewValue}}
+      </md-option>
+    </md-select>
+  </md-card>
   <md-card>
     <md-input-container>
       <input mdInput placeholder="Favorite food" value="Sushi">
     </md-input-container>
   </md-card>
+  <md-card>
+    <md-slide-toggle>Slide me!</md-slide-toggle>
+  </md-card>
+  <md-card>
+    <md-slider></md-slider>
+  </md-card>
+  <md-card>
+    <md-radio-group>
+      <md-radio-button value="1">Option 1</md-radio-button>
+      <md-radio-button value="2">Option 2</md-radio-button>
+    </md-radio-group>
+  </md-card>
+  <md-card>
+    <md-chip-list>
+      <md-chip>One fish</md-chip>
+      <md-chip>Two fish</md-chip>
+      <md-chip color="primary" selected="true">Primary fish</md-chip>
+      <md-chip color="accent" selected="true">Accent fish</md-chip>
+    </md-chip-list>
+  </md-card>
+  <md-card>
+    <md-checkbox>Check me!</md-checkbox>
+    <md-checkbox>Check me!</md-checkbox>
+    <md-checkbox>Check me!</md-checkbox>
+  </md-card>
+  <md-card>
+    <button md-button>Click me!</button>
+    <md-button-toggle>Toggle me!</md-button-toggle>
+  </md-card>
 </div>
+
 

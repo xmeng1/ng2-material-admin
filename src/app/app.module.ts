@@ -62,7 +62,7 @@ import {
 })
 export class AppModule {
   constructor(public overlayContainer: OverlayContainer) {
-    //https://github.com/angular/material2/pull/2967/commits/3e6d57d80f556704f3e4a828061992c7012e925a
-    overlayContainer.themeClass = 'deep-purple-amber';
+    // https://github.com/angular/material2/pull/2967/commits/3e6d57d80f556704f3e4a828061992c7012e925a
+    // overlayContainer.themeClass = 'dark-pink-indigo';
   }
 }
