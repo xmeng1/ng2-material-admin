@@ -1,0 +1,83 @@
+@import '~@angular/material/theming';
+//the theme list
+// light
+//1. indigo-pink
+//2. deep-purple-amber
+//3. pink-blue-grey
+//4. purple-green
+//6. orange-cyan
+// dark
+
+@include mat-core();
+// Define a theme.
+$primary: mat-palette($mat-indigo, 700, 500, 800);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+$theme: mat-light-theme($primary, $accent);
+
+// Include all theme styles for the components.
+@include angular-material-theme($theme);
+.pink-indigo{
+  $primary: mat-palette($mat-pink);
+  $accent:  mat-palette($mat-indigo, A200, A100, A400);
+  $theme: mat-light-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
+
+.deep-purple-amber{
+  $primary: mat-palette($mat-deep-purple);
+  $accent:  mat-palette($mat-amber, A200, A100, A400);
+  $theme: mat-light-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
+.pink-blue-grey{
+  $primary: mat-palette($mat-pink);
+  $accent:  mat-palette($mat-blue-grey, A200, A100, A400);
+  $theme: mat-light-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
+.purple-green{
+  $primary: mat-palette($mat-purple);
+  $accent:  mat-palette($mat-green, A200, A100, A400);
+  $theme: mat-light-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
+.orange-cyan{
+  $primary: mat-palette($mat-orange);
+  $accent:  mat-palette($mat-cyan, A200, A100, A400);
+  $theme: mat-light-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
+
+
+//dark
+.dark-pink-indigo{
+  $primary: mat-palette($mat-pink);
+  $accent:  mat-palette($mat-indigo, A200, A100, A400);
+  $theme: mat-dark-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
+
+.dark-deep-purple-amber{
+  $primary: mat-palette($mat-deep-purple);
+  $accent:  mat-palette($mat-amber, A200, A100, A400);
+  $theme: mat-dark-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
+.dark-pink-blue-grey{
+  $primary: mat-palette($mat-pink);
+  $accent:  mat-palette($mat-blue-grey, A200, A100, A400);
+  $theme: mat-dark-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
+.dark-purple-green{
+  $primary: mat-palette($mat-purple);
+  $accent:  mat-palette($mat-green, A200, A100, A400);
+  $theme: mat-dark-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
+.dark-orange-cyan{
+  $primary: mat-palette($mat-orange);
+  $accent:  mat-palette($mat-cyan, A200, A100, A400);
+  $theme: mat-dark-theme($primary, $accent);
+  @include angular-material-theme($theme);
+}
