@@ -62,6 +62,6 @@ import {
 })
 export class AppModule {
   constructor(public overlayContainer: OverlayContainer) {
-    overlayContainer.themeClass = 'red-indigo';
+    overlayContainer.themeClass = 'deep-purple-amber';
   }
 }
